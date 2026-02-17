@@ -4,6 +4,7 @@ app.use(express.json());
 
 app.post("/feishu", (req, res) => {
     const body = req.body;
+    console.log("Incoming request:", JSON.stringify(body));
 
     // 飞书第一次验证 URL
     if (body.type === "url_verification") {
